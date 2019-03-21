@@ -92,7 +92,8 @@ TopBar.propTypes = {
   title: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
   more: PropTypes.bool.isRequired,
-  onMorePress: PropTypes.func.isRequired,
+  onMorePress: PropTypes.func,
+  onClosePress: PropTypes.func,
   theme: PropTypes.object.isRequired
 }
 
