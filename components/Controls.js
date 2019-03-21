@@ -99,7 +99,7 @@ class Controls extends Component {
     return (
       <Touchable style={styles.container} onPress={() => this.showControls()}>
         <Animated.View style={[styles.container, { paddingBottom: this.progressbar }]}>
-          <ProgressBar theme={this.props.theme.progress} progress={this.props.progress} />
+          {/* <ProgressBar theme={this.props.theme.progress} progress={this.props.progress} /> */}
         </Animated.View>
       </Touchable>
     )
