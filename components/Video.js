@@ -350,6 +350,7 @@ class Video extends Component {
       onTimedMetadata,
       resizeMode,
       onMorePress,
+      onClosePress,
       inlineOnly,
       playInBackground,
       playWhenInactive,
@@ -421,6 +422,7 @@ class Video extends Component {
           title={title}
           more={!!onMorePress}
           onMorePress={() => onMorePress()}
+          onClosePress={() => onClosePress()}
           theme={setTheme}
           inlineOnly={inlineOnly}
           controlDuration={controlDuration}
@@ -466,6 +468,7 @@ Video.propTypes = {
   onError: PropTypes.func,
   onProgress: PropTypes.func,
   onMorePress: PropTypes.func,
+  onClosePress: PropTypes.func,
   onFullScreen: PropTypes.func,
   onTimedMetadata: PropTypes.func,
   rate: PropTypes.number,
@@ -496,6 +499,7 @@ Video.defaultProps = {
   onError: () => {},
   onProgress: () => {},
   onMorePress: undefined,
+  onClosePress: undefined,
   onFullScreen: () => {},
   onTimedMetadata: () => {},
   rate: 1,

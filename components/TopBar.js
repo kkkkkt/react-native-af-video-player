@@ -44,12 +44,27 @@ const TopBar = (props) => {
     more,
     title,
     theme,
-    onMorePress
+    onMorePress,
+    onClosePress
   } = props
   return (
     <LinearGradient colors={['rgba(0,0,0,0.75)', 'rgba(0,0,0,0)']} style={styles.container}>
       <View style={styles.row}>
-        { logo && <Image style={styles.logo} resizeMode="contain" {...checkSource(logo)} />}
+        {/* { logo && <Image style={styles.logo} resizeMode="contain" {...checkSource(logo)} />} */}
+        {/* keyboard_arrow_down */}
+        { onClosePress &&
+          <ToggleIcon
+              style={styles.logo}
+              onPress={() => onClosePress()}
+              paddingRight
+              iconOff="keyboard-arrow-down"
+              iconOn="keyboard-arrow-down"
+              theme={theme.more}
+              size={25}
+            />
+        }
+
+
         <Text
           style={[styles.title, { color: theme.title }]}
           numberOfLines={1}
